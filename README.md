@@ -22,7 +22,7 @@ conda install -c rdkit rdkit
 The tanimoto.py cli program can be installed by cloning the GitHub repository:
 
 ```
-git clone
+git clone https://github.com/mariusrueve/tanimoto.git
 ```
 
 ## Usage
