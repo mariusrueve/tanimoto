@@ -90,7 +90,6 @@ def get_top_n(similarity_list, n):
 
 
 def main():
-    start = time.time()
     args = get_arguments()
     mol_list1 = get_mol_list(
         os.path.join(pl.Path(__file__).parent.absolute(), args.file1)
@@ -112,9 +111,10 @@ def main():
 
     df.to_csv(output_location, index=False)
     print(f"Results written to '{output_location}'", file=sys.stderr)
-    end = time.time()
-    print(f"Time elapsed: {end - start} seconds")
 
 
 if __name__ == "__main__":
+    start = time.time()
     main()
+    end = time.time()
+    print(f"Time elapsed: {end - start} seconds", file=sys.stderr)
