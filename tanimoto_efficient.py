@@ -3,27 +3,10 @@ import os
 import sys
 import time
 
-import multiprocessing as mp
-from multiprocessing import Pool
-
 from rdkit import Chem, DataStructs, RDLogger
-from rdkit.Chem import AllChem, rdMolDescriptors
+from rdkit.Chem import rdMolDescriptors
 
 RDLogger.DisableLog("rdApp.*")
-
-# q: How can I make this script more efficient?
-# a: Use a fingerprint list instead of a molecule list
-
-# q: Doesn't i already use a fingerprint list?
-# a: Yes, but it is calculated on the fly. Instead, we can calculate the fingerprints for each molecule in the list once and store them in a list.
-
-# q: How do I do that?
-# a: See the calculate_fingerprint function below. It takes a list of molecules as input and returns a list of fingerprints.
-# The fingerprints are calculated using the RDKit function GetMorganFingerprintAsBitVect. The function takes three arguments:
-# the molecule, the radius of the fingerprint and the number of bits.
-# The radius is the number of bonds that are considered when calculating the fingerprint.
-# The number of bits is the length of the fingerprint. The default value for the radius is 2 and the default value for the number of bits is 2048.
-# In this case, we use a radius of 2 and a number of bits of 1024. The radius and number of bits are chosen to be the same as in the original script.
 
 
 def get_arguments():
