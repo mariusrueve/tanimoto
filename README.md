@@ -12,38 +12,32 @@ where $A$ and $B$ are the two sets, and $|A|$ is the number of elements in $A$. 
 
 ## Installation
 
-The tanimoto.py cli program requires Python 3.6 or higher. It also requires the RDKit cheminformatics software. The RDKit can be installed using conda:
-
-```bash
-conda install -c rdkit rdkit
-```
-
-The tanimoto.py cli program can be installed by cloning the GitHub repository:
+The tanimoto.py program requires Python 3.6 or higher. The program can be installed using pip:
 
 ```bash
 git clone https://github.com/mariusrueve/tanimoto.git
+pip install tanimoto
 ```
 
 ## Usage
 
-The tanimoto.py cli program can be run from the command line as follows:
+The tanimoto.py program can be used as a command line interface (CLI) program. The program takes two files as input, and calculates the Tanimoto similarity between the two files. The files should be in SMI format, with one SMILES string per line. The program can be run as follows:
 
 ```bash
-python tanimoto.py --file1 <filename> --file2 <filename>
+tanimoto-cli file1.smi file2.smi
 ```
 
-The program takes two arguments, the names of two files containing SMILES strings, one SMILEs per column. The program calculates the Tanimoto similarity between each pair of SMILES strings, and writes the results to a file called `results.csv`.
-
-If you want to specify the number of most similar molecules to return, you can use the `--top` argument:
+The program then prints the Tanimoto similarity between the two files to the terminal. If you want to save the output to a file, you can pipe the output to a file:
 
 ```bash
-python tanimoto.py --file1 <filename> --file2 <filename> --top 10
+tanimoto-cli file1.smi file2.smi > output.csv
 ```
 
-If you want to use the efficient version of the Tanimoto similarity, you can use it like this:
 
-```bash
-python tanimoto_efficient.py --file1 <filename> --file2 <filename> > output.tsv
-```
+## Development
 
-Here you have to write the output to a file yourself. The efficient version of the Tanimoto similarity is faster than the normal version.
+The tanimoto.py program is developed using Python 3.6. The program uses the following libraries:
+
+- RDKit
+- Num Py
+

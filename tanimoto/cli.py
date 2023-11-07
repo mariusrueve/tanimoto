@@ -16,7 +16,7 @@ def main():
     if args.verbose:
         logging.basicConfig(level=logging.INFO)
 
-    query_molecules, database_molecules, similarities = tanimoto_coefficient_list(args.query_molecules, args.database_molecules)
+    query_molecules, database_molecules, similarities = tanimoto_coefficient_list(args.query_molecules, args.database_molecules, args.verbose)
     
     print_results(query_molecules, database_molecules, similarities)
 

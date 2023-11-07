@@ -10,7 +10,7 @@ def setup_package():
         name="tanimoto",
         version="0.1.0",
         author="Marius Rüve",
-        author_email="nope",
+        author_email="marius.rueve@live.de",
         description="A CLI tool for calculating Tanimoto similarity",
         long_description=open('README.md').read(),
         long_description_content_type="text/markdown",
@@ -27,6 +27,10 @@ def setup_package():
             "Operating System :: OS Independent",
         ],
         python_requires=">=3.6",
+        install_requires=[
+            "numpy",
+            "rdkit"
+        ]
     )
 
 if __name__ == '__main__':
