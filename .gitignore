@@ -2,3 +2,13 @@
 /.vscode
 /bulk_tanimoto.py
 __pycache__
+
+# PyInstaller
+/dist
+/build
+*.spec
+
+# Ignore files from pip install
+*.egg-info
+*.egg
+*.pyc
