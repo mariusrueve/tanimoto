@@ -45,4 +45,4 @@ The tanimoto.py program is developed using Python 3.6. The program uses the foll
 - Num Py
 
 ## Credits
-Thank you @HokageM for the logo
+Thank you [@HokageM](https://github.com/HokageM) for the logo
