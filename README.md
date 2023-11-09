@@ -44,3 +44,5 @@ The tanimoto.py program is developed using Python 3.6. The program uses the foll
 - RDKit
 - Num Py
 
+## Credits
+Thank you @HokageM for the logo
