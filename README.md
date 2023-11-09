@@ -1,5 +1,8 @@
 # Tanimoto Similarity
 
+<img src="logo.png" width="150">
+
+
 ## Introduction
 
 The tanimoto.py cli program calculates the Tanimoto similarity between two lists of SMILES strings. The Tanimoto similarity is a measure of the similarity between two sets. In this case, the two sets are the sets of substructures in each SMILES string. The Tanimoto similarity is calculated as follows:
